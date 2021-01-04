@@ -94,21 +94,6 @@ public class FisterPrototype : MonoBehaviour
     }
 
 
-    public static float EaseOutQuad(float start, float end, float value)
-    {
-        end -= start;
-        return -end * value * (value - 2) + start;
-    }
-    public Vector3 EaseOutQuadVector3(Vector3 start, Vector3 end, float value)
-    {
-        Vector3 output = Vector3.zero;
-
-        output.x = EaseOutQuad(start.x, end.x, value);
-        output.y = EaseOutQuad(start.y, end.y, value);
-        output.z = EaseOutQuad(start.z, end.z, value);
-
-        return output;
-    }
 
 
     public void StartedLerping(fistState fState)
